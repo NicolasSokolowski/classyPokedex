@@ -10,9 +10,15 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+  <header>
+    <div>
+      <img src="" alt="" height="30">
+    </div>
+
     <nav>
-      <a href="/" class="link">Home</a>
+      <a href="/" class="link">HOME</a>
     </nav>
+  </header>
     <div class="pokemon-container"></div>
     </div>
       <!-- Template for Pokemons card -->
@@ -20,7 +26,7 @@
           <div class="image_frame_container">
             <div class="image-container">
               <a slot="data-link">
-                <img class="imageInsert link" href="" src="" alt="Pokemon Image" width="200" height="400" >
+                <img class="imageInsert link" href="" src="" alt="Pokemon Image" height="400" >
               </a>
             </div>
             <div class="pokemon-name">
@@ -31,19 +37,22 @@
 
       <!-- Template for single Pokemon page -->
       <template id="pokemon-page-template">
-        <div class="pokemon-info_wrapper">
           <div class="image-container">
             <a>
-              <img class="imageInsert link" src="" alt="Pokemon Image">
+              <img class="single-imageInsert link" src="" alt="Pokemon Image" height="700">
             </a>
           </div>
-          <div class="pokemon-name">
-            Pokemon Name
-          </div>
-          <div class="one_pokemon-type">
-            Pokemon type
-          </div>
-        </div>
+          <div class="info_wrapper">
+            <div class="single-pokemon-name">
+              Pokemon Name
+            </div>
+            <div class="single-pokemon-type">
+            </div>
+
+            <div class="single-pokemon-story">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis ante a est tincidunt pharetra. Sed aliquam, tellus ac vulputate lobortis, eros urna elementum neque, eu hendrerit mi lacus eget dolor. Curabitur eget efficitur metus. Ut ultricies maximus orci, at vehicula lorem consequat in. Quisque maximus lacinia eros, eu aliquam tellus mattis nec. Fusce at facilisis ipsum. Sed at convallis lorem. Aenean in erat neque. Vestibulum rutrum, neque a vulputate aliquet, quam ipsum scelerisque est, vitae facilisis magna ligula eget ex. Morbi nisl turpis, dignissim non lacus sed, semper mollis orci. Maecenas nec dolor quis enim volutpat efficitur. Integer luctus, ante ut volutpat gravida, libero neque dapibus risus, eu pellentesque ipsum purus eget augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+            </div>
+          </div>  
     </template>
     <script type="module" src="./js/index.js"></script>
 </body>

@@ -45,11 +45,22 @@ const app = {
 
     const newCard = document.importNode(cardTemplate.content, true);
 
-    newCard.querySelector(".imageInsert").src = pokemon.image_url;
-    newCard.querySelector(".pokemon-name").textContent = pokemon.fr_name.toUpperCase();
+    newCard.querySelector(".single-imageInsert").src = pokemon.image_url;
+    newCard.querySelector(".single-pokemon-name").textContent = pokemon.fr_name.toUpperCase();
     newCard.querySelector('.link').href = `/pokemon/${pokemon.id}`;
-
     document.querySelector(".pokemon-container").append(newCard);
+
+    
+    pokemon.energies.forEach((energy) => {
+      const pokemonTypes = document.querySelector(".single-pokemon-type");
+      const newLogoTypeImage = document.createElement("img");
+
+      newLogoTypeImage.src = `../assets/images/${energy.name}.svg`;
+      newLogoTypeImage.style.backgroundColor = `${energy.color}`;
+
+
+      pokemonTypes.append(newLogoTypeImage)
+    })
   },
 
   displayOnePokemon (pokemon) {

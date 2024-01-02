@@ -1,12 +1,33 @@
 body {
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.0762429971988795) 0%, rgba(230,76,76,0.8493522408963585) 100%, rgba(0,212,255,1) 100%);
+    background: rgb(63,64,73);
+    background: radial-gradient(circle, rgba(63,64,73,1) 0%, rgba(56,42,44,0.5830707282913166) 100%);
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:visited {
+    text-decoration: none;
+    color: black;
 }
 
 .pokemon-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .image_frame_container {
@@ -16,16 +37,9 @@ body {
     justify-content: center;
     width: 8%;
     height: 100%;
-    margin: 1% 4%;
+    margin: 1% 4%; 
 }
 
-.image_frame-container {
-    border-radius: 10px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    padding-right: 3%;
-    margin-right: -1px;
-}
 
 .image-container img {
     width: 100% ;
@@ -38,4 +52,44 @@ body {
     text-align: center;
     font-family: 'Oswald', sans-serif;
     padding: 1%;
+}
+
+.info_wrapper {
+    width: 40%;
+    height: 90%;
+    flex-wrap: wrap;
+    padding: 0% 2%;
+}
+
+.single-pokemon-name {
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    padding: 1%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.single-pokemon-type {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+}
+
+.single-pokemon-type img {
+    padding: 1.8%;
+    margin-left: 0;
+    margin-right: 1%;
+    border-radius: 50px;
+    width: 30px;
+}
+
+.single-pokemon-story {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+    height: 100%;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
 }

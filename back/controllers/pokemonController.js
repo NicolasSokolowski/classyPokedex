@@ -3,9 +3,10 @@ import { Pokemon, Energy } from "../models/index.js";
 export const pokemonController = {
   getAllPokemons: async function (_, res) {
     const pokemons = await Pokemon.findAll({
+      include: ["energies"],
       order: [
         ["id", "ASC"]
-      ]
+      ],
     });
 
     res.json(pokemons);

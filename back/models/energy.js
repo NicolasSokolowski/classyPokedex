@@ -7,6 +7,10 @@ Energy.init({
   name: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  color: {
+    type: DataTypes.TEXT,
+    allowNull: false
   }
 }, {
   sequelize,
