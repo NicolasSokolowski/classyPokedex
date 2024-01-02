@@ -9,9 +9,16 @@ export default class extends CoreView {
   }
 
   async getHtml() {
+    app.resetHTML();
+
     console.log(app.pokemonsList.length === 0);
     if (app.pokemonsList.length === 0) {
-      app.fetchPokemonsList();
+      await app.fetchPokemonsList();
     }
+    console.log(app.pokemonsList);
+    app.pokemonsList.forEach((pokemon) => {
+      app.createPokemonCard(pokemon);
+    })
+
   }
 }

@@ -8,6 +8,7 @@ const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(
 
 const getParams = match => {
   const values = match.result.slice(1);
+
   const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
 
   return Object.fromEntries(keys.map((key, i) => {
@@ -46,7 +47,7 @@ const router = async () => {
 
   const view = new match.route.view(getParams(match));
 
-  view.getHtml();
+  await view.getHtml();
 
 
 };

@@ -11,12 +11,12 @@ export default class extends CoreView {
   async getHtml() {
     const pokemonID = this.params.id;
     if (app.pokemonsList.length === 0) {
-      const pokemons = await app.fetchPokemonsList();
+      await app.fetchPokemonsList();
     }
 
     const pokemon = app.pokemonsList.find((e) => e.id == pokemonID);
     console.log(pokemon);
-    app.createPokemonCard(pokemon);
+    app.displayOnePokemon(pokemon);
   }
   
 }

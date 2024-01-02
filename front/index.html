@@ -10,23 +10,41 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <nav>
-    <a href="/" class="link">Home</a>
-  </nav>
-    <!-- Template for Pokemon card -->
-    <template id="pokemon-card-template">
-        <div class="image_frame_container">
+    <nav>
+      <a href="/" class="link">Home</a>
+    </nav>
+    <div class="pokemon-container"></div>
+    </div>
+      <!-- Template for Pokemons card -->
+      <template id="pokemon-card-template">
+          <div class="image_frame_container">
+            <div class="image-container">
+              <a slot="data-link">
+                <img class="imageInsert link" href="" src="" alt="Pokemon Image" width="200" height="400" >
+              </a>
+            </div>
+            <div class="pokemon-name">
+              Pokemon Name
+            </div>
+          </div>
+      </template>
+
+      <!-- Template for single Pokemon page -->
+      <template id="pokemon-page-template">
+        <div class="pokemon-info_wrapper">
           <div class="image-container">
-            <a slot="data-link">
-            <img class="imageInsert link" href="" src="" alt="Pokemon Image" width="200" height="400" >
+            <a>
+              <img class="imageInsert link" src="" alt="Pokemon Image">
             </a>
           </div>
           <div class="pokemon-name">
             Pokemon Name
           </div>
+          <div class="one_pokemon-type">
+            Pokemon type
+          </div>
         </div>
     </template>
-
     <script type="module" src="./js/index.js"></script>
 </body>
 </html>

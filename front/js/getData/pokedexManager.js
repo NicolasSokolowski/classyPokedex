@@ -18,9 +18,9 @@ const app = {
       pokemons.forEach((pokemon) => {
         app.pokemonsList.push(pokemon);
       })
-      app.pokemonsList.forEach((pokemon) => {
+/*      app.pokemonsList.forEach((pokemon) => {
         this.createPokemonCard(pokemon);
-      })
+      }) */
     } catch (error) {
       console.log(error);
       return [];
@@ -36,8 +36,29 @@ const app = {
     newCard.querySelector(".pokemon-name").textContent = pokemon.fr_name.toUpperCase();
     newCard.querySelector('.link').href = `/pokemon/${pokemon.id}`;
 
-    document.querySelector("body").append(newCard);
+    document.querySelector(".pokemon-container").append(newCard);
     
+  },
+
+  renderDetailedPokemon (pokemon) {
+    const cardTemplate = document.getElementById("pokemon-page-template");
+
+    const newCard = document.importNode(cardTemplate.content, true);
+
+    newCard.querySelector(".imageInsert").src = pokemon.image_url;
+    newCard.querySelector(".pokemon-name").textContent = pokemon.fr_name.toUpperCase();
+    newCard.querySelector('.link').href = `/pokemon/${pokemon.id}`;
+
+    document.querySelector(".pokemon-container").append(newCard);
+  },
+
+  displayOnePokemon (pokemon) {
+    app.resetHTML();
+    app.renderDetailedPokemon(pokemon);
+  },
+
+  resetHTML () {
+    document.querySelector(".pokemon-container").innerHTML = "";
   }
 }
 

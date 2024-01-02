@@ -1,9 +1,12 @@
 body {
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.0762429971988795) 0%, rgba(230,76,76,0.8493522408963585) 100%, rgba(0,212,255,1) 100%);
+}
+
+.pokemon-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.0762429971988795) 0%, rgba(230,76,76,0.8493522408963585) 100%, rgba(0,212,255,1) 100%);
 }
 
 .image_frame_container {
