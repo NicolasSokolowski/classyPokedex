@@ -18,9 +18,7 @@ const app = {
       pokemons.forEach((pokemon) => {
         app.pokemonsList.push(pokemon);
       })
-/*      app.pokemonsList.forEach((pokemon) => {
-        this.createPokemonCard(pokemon);
-      }) */
+
     } catch (error) {
       console.log(error);
       return [];
@@ -33,6 +31,7 @@ const app = {
     const newCard = document.importNode(cardTemplate.content, true);
 
     newCard.querySelector(".imageInsert").src = pokemon.image_url;
+    newCard.querySelector(".imageInsert").alt = `Image du pokemon ${pokemon.fr_name} habillé en costume`;
     newCard.querySelector(".pokemon-name").textContent = pokemon.fr_name.toUpperCase();
     newCard.querySelector('.link').href = `/pokemon/${pokemon.id}`;
 
@@ -46,6 +45,7 @@ const app = {
     const newCard = document.importNode(cardTemplate.content, true);
 
     newCard.querySelector(".single-imageInsert").src = pokemon.image_url;
+    newCard.querySelector(".single-imageInsert").alt = `Image du pokemon ${pokemon.fr_name} habillé en costume`;
     newCard.querySelector(".single-pokemon-name").textContent = pokemon.fr_name.toUpperCase();
     newCard.querySelector('.link').href = `/pokemon/${pokemon.id}`;
     document.querySelector(".pokemon-container").append(newCard);

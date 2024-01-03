@@ -15,7 +15,7 @@ export default class extends CoreView {
     if (app.pokemonsList.length === 0) {
       await app.fetchPokemonsList();
     }
-    console.log(app.pokemonsList);
+
     app.pokemonsList.forEach((pokemon) => {
       app.createPokemonCard(pokemon);
     })
